@@ -9,9 +9,14 @@ namespace Inheritance
     public class Pelican : Bird
     {
         public string Type { get; set; }
-        public Pelican(string name, double wingSpan, string type) : base(name, wingSpan)
+        public Pelican(string name, int age, double weight, double wingSpan, string type) : base(name, age, weight, wingSpan)
         {
             Type = type;
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"{Type}";
         }
     }
 }

@@ -11,13 +11,13 @@ namespace Inheritance
         {
             
             List<Animal> animals = new List<Animal>();
-            animals.Add(new Horse("Horse", false));
-            animals.Add(new Hedgehog("Hedgehog", 250));
-            animals.Add(new Wolf("Wolf", WolfColor.Grey));
-            animals.Add(new Worm("Worm", true));
-            animals.Add(new Bird("Bird", 3));
-            animals.Add(new Dog("Dog", "Akita"));
-            animals.Add(new Wolfman("Wolfman", WolfColor.White));
+            animals.Add(new Horse("Horse", 10, 80, false));
+            animals.Add(new Hedgehog("Hedgehog", 3, 5, 250));
+            animals.Add(new Wolf("Wolf", 5, 20, WolfColor.Grey));
+            animals.Add(new Worm("Worm", 1, 0.02, true));
+            animals.Add(new Bird("Bird", 2, 3, 3));
+            animals.Add(new Dog("Dog", 3, 25, "Akita"));
+            animals.Add(new Wolfman("Wolfman", 17, 68, WolfColor.White));
 
             foreach (var animal in animals)
             {

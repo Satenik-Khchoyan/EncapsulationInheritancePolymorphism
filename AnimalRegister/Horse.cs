@@ -9,7 +9,7 @@ namespace Inheritance
     public class Horse : Animal
     {
         public bool IsFoal { get; set; }
-        public Horse(string name, bool isFoal) : base(name)
+        public Horse(string name, int age, double weight, bool isFoal) : base(name, age, weight)
         {
             IsFoal = isFoal;
         }
@@ -19,7 +19,7 @@ namespace Inheritance
         }
         public override string Stats()
         {
-            return $"{IsFoal}";
+            return $"{base.Stats()} {IsFoal}";
         }
     }
 }

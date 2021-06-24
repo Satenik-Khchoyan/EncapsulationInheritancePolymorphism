@@ -9,7 +9,7 @@ namespace Inheritance
     public class Bird : Animal
     {
         public double WingSpan { get; set; }
-        public Bird(string name, double wingSpan) : base(name)
+        public Bird(string name, int age, double weight, double wingSpan) : base(name, age, weight)
         {
             WingSpan = wingSpan;
         }
@@ -19,7 +19,7 @@ namespace Inheritance
         }
         public override string Stats()
         {
-            return $"{WingSpan}";
+            return $"{base.Stats()} {WingSpan}";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Inheritance
 {
     public class Wolfman : Wolf, IPerson
     {
-        public Wolfman(string name, WolfColor color) : base(name, color)
+        public Wolfman(string name, int age, double weight, WolfColor color) : base(name, age, weight, color)
         {
                 
         }

@@ -10,7 +10,7 @@ namespace Inheritance
     {
 
         public string Type { get; set; }
-        public Dog(string name, string type) : base(name)
+        public Dog(string name, int age, double weight, in string type) : base(name, age, weight)
         {
             Type = type;
         }
@@ -21,7 +21,7 @@ namespace Inheritance
 
         public override string Stats()
         {
-            return $"{Type}";
+            return $"{base.Stats()} {Type}";
         }
 
         public string Hungry()

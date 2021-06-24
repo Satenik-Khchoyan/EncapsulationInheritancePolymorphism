@@ -10,9 +10,14 @@ namespace Inheritance
     {
         public double Height { get; set; }
 
-        public Swan(string name, double wingSpan, double height): base(name, wingSpan)
+        public Swan(string name, int age, double weight, double wingSpan, double height): base(name, age, weight, wingSpan)
         {
             Height = height;
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $"{Height}";
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Inheritance
     public class Worm : Animal
     {
         public bool IsPoisonous { get; set; }
-        public Worm(string name, bool isPoisonous) : base(name)
+        public Worm(string name, int age, double weight, bool isPoisonous) : base(name, age, weight)
         {
             IsPoisonous = isPoisonous;
         }
@@ -19,7 +19,7 @@ namespace Inheritance
         }
         public override string Stats()
         {
-            return $"{IsPoisonous}";
+            return $"{base.Stats()} {IsPoisonous}";
         }
     }
 }

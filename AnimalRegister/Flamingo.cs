@@ -9,10 +9,15 @@ namespace Inheritance
     public class Flamingo : Bird
     {
         public int FlamingoAge { get; set; }
-        public Flamingo(string name, double wingSpan, int flamingoAge) : base(name, wingSpan)
+        public Flamingo(string name, int age, double weight, double wingSpan, int flamingoAge) : base(name, age, weight, wingSpan)
         {
             FlamingoAge = flamingoAge; 
         }
-        
+
+        public override string Stats()
+        {
+            return base.Stats() + $"{FlamingoAge}";
+        }
+
     }
 }

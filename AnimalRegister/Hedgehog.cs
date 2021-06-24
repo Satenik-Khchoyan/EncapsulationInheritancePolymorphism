@@ -9,15 +9,17 @@ namespace Inheritance
     public class Hedgehog : Animal
     {
         public int NrOfSpikes { get; set; }
-        public Hedgehog(string name, int nrOfSpikes) : base(name)
+        public Hedgehog(string name, int age, double weight, int nrOfSpikes) : base(name, age, weight)
         {
             NrOfSpikes = nrOfSpikes;
         }
         public override void DoSound()
         {
             Console.WriteLine("Snuffle, snuffle"); 
-        }        public override string Stats()
+        }
+        public override string Stats()
         {
-            return $"{NrOfSpikes}";
-        }    }
+            return $"{base.Stats()} {NrOfSpikes}";
+        }
+    }
 }

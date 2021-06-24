@@ -19,9 +19,11 @@ namespace Inheritance
             return $"{Name} {Age} {Weight}";
         }
 
-        public Animal(string name)
+        public Animal(string name, int age, double weight)
         {
             Name = name;
+            Age = age;
+            Weight = weight;
         }
     }
 }

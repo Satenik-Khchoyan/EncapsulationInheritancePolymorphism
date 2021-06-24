@@ -15,7 +15,7 @@ namespace Inheritance
     {
         public WolfColor Color { get; set; }
 
-        public Wolf(string name, WolfColor color) : base(name)
+        public Wolf(string name, int age, double weight, WolfColor color) : base(name, age, weight)
         {
             Color = color;
         }
@@ -25,7 +25,7 @@ namespace Inheritance
         }
         public override string Stats()
         {
-            return $"{Color}";
+            return $"{base.Stats()} {Color}";
         }
     }
 }
